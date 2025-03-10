@@ -1,89 +1,290 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="/public/Css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/gif" href="">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</head>
+<body>
+    <header class="header">
+        <a href="/public/Index.html" class="logo">David Adrian</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#about">Acerca de</a>
+            <a href="#services">Servicios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+
+    <section class="home" id="home">
+        <div class="home-contend">
+            <h1>Hola, soy<span> David Adrian</span></h1>
+            <h3>Desarrollador Web</h3>
+            <p>Soy un apasionado del desarrollo web con habilidades en HTML, CSS y JavaScript. Me especializo en la creación de sitios modernos, responsivos y optimizados para brindar la mejor experiencia al usuario. Mi objetivo es ayudar a negocios y emprendedores a tener presencia en línea con diseños atractivos y funcionales. ¡Hablemos sobre tu próximo proyecto!</p>
+
+            
+            <div class="social-media">
+                <a href=""><i class='bx bxl-linkedin'></i></a>
+                <a href=""><i class='bx bxl-github'></i></a>
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+            </div>
+
+            <a href="/public/resource/DavidAdrianSocolaCisneros-CV.pdf" class="btn" download >Descargar Cv</a>
+
+            <a href="https://wa.me/+51926953539" target="_blank" class="btn-whatsapp">
+                <i class='bx bxl-whatsapp bx-tada' ></i>
+                <p>Contactame</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-contend">
+            <div class="about-me">
+                <h2 class="heading">Acerca De <span>Mi</span></h2>
+                <h3>Yo soy un <span>Frontend Developer</span></h3>
+                <p>
+                    Apasionado por la creación de experiencias web atractivas e intuitivas. Me especializo en el desarrollo de interfaces dinámicas y responsivas utilizando tecnologías como HTML, CSS, JavaScript y frameworks modernos. Mi enfoque está en la usabilidad, accesibilidad y rendimiento, asegurando que cada proyecto tenga un diseño elegante y una funcionalidad eficiente.
+                </p>
+            </div>
+    
+            <div class="skills">
+                <h3>Habilidades</h3>
+                <div class="content-skills">
+                    <div class="item-skill">
+                        <span>HTML</span>
+                        <i class='bx bxl-html5'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>CSS</span>
+                        <i class='bx bxl-css3'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>JavaScript</span>
+                        <i class='bx bxl-javascript'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>Node.js</span>
+                        <i class='bx bxl-nodejs'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>Git</span>
+                        <i class='bx bxl-git'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>GitHub</span>
+                        <i class='bx bxl-github'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>React</span>
+                        <i class='bx bxl-react'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>Vue.js</span>
+                        <i class='bx bxl-vuejs'></i>
+                    </div>
+    
+                    <div class="item-skill">
+                        <span>PostgreSQL</span>
+                        <i class='bx bxl-postgresql'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-img">
+            <img src="/public/images/FotoWeb (1).jpg" alt="Foto de juan">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Mis <span>Servicios</span></h2>
+        <p class="heading-description">
+            Ofrezco soluciones web a medida, desde el diseño y desarrollo de sitios hasta la optimización y mantenimiento. Me especializo en crear experiencias digitales atractivas y funcionales, adaptadas a tus necesidades. ¡Trabajemos juntos para hacer realidad tu proyecto!
+        </p>
+
+        <div class="services-content">
+            <div class="service-item">
+                <i class='bx bx-code'></i>
+                <h3>Desarrollador Web</h3>
+                <p>
+                    Transformo ideas en páginas web funcionales y atractivas, utilizando tecnologías modernas como HTML, CSS, JavaScript y frameworks como React o Vue.js. Me especializo en crear experiencias intuitivas y optimizadas para el usuario, garantizando rendimiento y accesibilidad.
+                </p>
+                <a href="" class="btn-now">Contacta Ahora <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+
+            <div class="service-item">
+                <i class='bx bx-paint'></i>
+                <h3>Diseño UI/UX</h3>
+                <p>
+                    Diseño interfaces atractivas y fáciles de usar, enfocadas en la mejor experiencia del usuario. Creo prototipos interactivos y realizo estudios de usabilidad para garantizar un diseño intuitivo y funcional.
+                </p>
+                <a href="" class="btn-now">Contacta Ahora <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+
+            <div class="service-item">
+                <i class='bx bx-mobile-alt'></i>
+                <h3>Desarrollo Movil</h3>
+                <p>
+                    Creo aplicaciones móviles eficientes y bien estructuradas para Android e iOS, utilizando Flutter, React Native y tecnologías híbridas. Me enfoco en rendimiento, usabilidad y compatibilidad multiplataforma.
+                </p>
+                <a href="" class="btn-now">Contacta Ahora <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portafolio" id="portafolio">
+        <h2 class="heading">Mi <span>Portafolio</span></h2>
+        <p class="heading-description">
+            ¡Bienvenido a mi portafolio! Soy un apasionado del desarrollo web con experiencia en HTML, CSS y JavaScript. Aquí encontrarás algunos de mis proyectos, donde combino creatividad y código para crear experiencias interactivas y funcionales.
+        </p>
+
+        <div class="portafolio-content">
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/Ahagon-Umiko-hazuki-shizuku-Tooyama-Rin-6961355.jpeg"Portafolio1">
+            </div>
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/Suzukaze-Aoba-New-game!-Anime-4632334.jpeg" alt="Portafolio2">
+            </div>
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/Suzukaze-Aoba-Yagami-Kou-New-game!-6576724.jpeg" alt="Portafolio3">
+            </div>
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/Mita.jpeg" alt="Portafolio4">
+            </div>
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/MiSide-Игры-Kind-Mita-8757480.jpeg" alt="Portafolio5">
+            </div>
+
+            <div class="portafolio-item">
+                <div class="portafolio-header">
+                    <h2>Titulo</h2>
+                    <a href="">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
+                </p>
+                <img src="/public/images/MiSide-Игры-Mila-(MiSide)-8778706.jpeg" alt="Portafolio6">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contacta<span>Me</span></h2>
+        <p>
+            Si tienes alguna consulta, sugerencia o proyecto en mente, no dudes en escribirme. Estoy disponible para ayudarte y responder cualquier pregunta que tengas. ¡Contáctame y conversemos!
+        </p>
+
+        <div class="contac-content">
+            <form action="">
+                <input type="text" placeholder="Nombre Completo">
+                <input type="email" name="" id="" placeholder="Correo electronico">
+                <input type="number" name="" id="" placeholder="Numero de telefono">
+                <input type="text" placeholder="Asunto">
+                <textarea name="" id="" placeholder="Ingrese su mensaje"></textarea>
+
+                <div class="btn-submit">
+                    <input type="submit" value="Enviar mensaje" class="btn">
+                </div>
+            </form>
+
+            <div class="img-contact">
+                <img src="/public/images/img-contact.svg" alt="Imagen-contacto">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href=""><i class='bx bxl-linkedin'></i></a>
+                <a href=""><i class='bx bxl-github'></i></a>
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+            </div>
+            
+            <div class="arrow">
+                <a href="#home">
+                    <i class='bx bx-chevrons-up'></i>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">
+            &copy; David Adrian - Casi todos los derechos reservados
+        </p>
+    </footer>
+</body>
 </html>
