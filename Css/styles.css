@@ -171,7 +171,8 @@ span{
 @media (max-width: 1200px){
     .home{
         justify-content: center;
-        background-image: url(../images/Imagen\ de\ WhatsApp\ 2025-02-20\ a\ las\ 19.05.10_be57e5fa.jpg);
+        background-color: var(--bg-color);
+        background-image: none;
     }
 
     .home-contend{
