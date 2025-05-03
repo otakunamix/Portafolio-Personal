@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Web</title>
-    <link rel="stylesheet" href="/public/Css/styles.css">
+    <link rel="stylesheet" href="Css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="/public/Index.html" class="logo">David Adrian</a>
+        <a href="/public/index.html" class="logo">David Adrian</a>
         <nav class="navbar">
             <a href="#home" class="active">Inicio</a>
             <a href="#about">Acerca de</a>
@@ -51,7 +51,7 @@
     </section>
 
     <section class="about" id="about">
-        <div class="about-contend">
+        <div class="about-contend"> 
             <div class="about-me">
                 <h2 class="heading">Acerca De <span>Mi</span></h2>
                 <h3>Yo soy un <span>Frontend Developer</span></h3>
@@ -112,7 +112,7 @@
         </div>
 
         <div class="about-img">
-            <img src="/public/images/FotoWeb (1).jpg" alt="Foto de juan">
+            <img src="images/FotoWeb (1).jpg" alt="Foto de juan">
         </div>
     </section>
 
@@ -172,7 +172,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/Ahagon-Umiko-hazuki-shizuku-Tooyama-Rin-6961355.jpeg"Portafolio1">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg"Portafolio1">
             </div>
 
             <div class="portafolio-item">
@@ -185,7 +185,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/Suzukaze-Aoba-New-game!-Anime-4632334.jpeg" alt="Portafolio2">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg" alt="Portafolio2">
             </div>
 
             <div class="portafolio-item">
@@ -198,7 +198,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/Suzukaze-Aoba-Yagami-Kou-New-game!-6576724.jpeg" alt="Portafolio3">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg" alt="Portafolio3">
             </div>
 
             <div class="portafolio-item">
@@ -211,7 +211,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/Mita.jpeg" alt="Portafolio4">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg" alt="Portafolio4">
             </div>
 
             <div class="portafolio-item">
@@ -224,7 +224,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/MiSide-Игры-Kind-Mita-8757480.jpeg" alt="Portafolio5">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg" alt="Portafolio5">
             </div>
 
             <div class="portafolio-item">
@@ -237,7 +237,7 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum praesentium excepturi fugit quia nisi rem itaque corporis! Laborum exercitationem reiciendis porro doloremque assumenda velit architecto laboriosam odio provident necessitatibus.
                 </p>
-                <img src="/public/images/MiSide-Игры-Mila-(MiSide)-8778706.jpeg" alt="Portafolio6">
+                <img src="images/premium_photo-1684249781401-56992dda152d.jpg" alt="Portafolio6">
             </div>
         </div>
     </section>
@@ -249,20 +249,22 @@
         </p>
 
         <div class="contac-content">
-            <form action="">
-                <input type="text" placeholder="Nombre Completo">
-                <input type="email" name="" id="" placeholder="Correo electronico">
-                <input type="number" name="" id="" placeholder="Numero de telefono">
-                <input type="text" placeholder="Asunto">
-                <textarea name="" id="" placeholder="Ingrese su mensaje"></textarea>
+            <form onsubmit="enviarwhatsapp(event)">
+                <input type="text" placeholder="nombre Completo" id="nombre">
+                <input type="email" name="" id="correo" placeholder="Correo electronico" required>
+                <input type="number" name="" id="numero" placeholder="Numero de telefono" required>
+                <input type="text" placeholder="Asunto" id="asunto" required>
+                <textarea name="" id="mensaje" placeholder="Ingrese su mensaje" required></textarea>
 
                 <div class="btn-submit">
                     <input type="submit" value="Enviar mensaje" class="btn">
                 </div>
             </form>
 
+            <script src="../Javascript/formulario.js"></script>
+
             <div class="img-contact">
-                <img src="/public/images/img-contact.svg" alt="Imagen-contacto">
+                <img src="images/img-contact.svg" alt="Imagen-contacto">
             </div>
         </div>
     </section>
